@@ -1,0 +1,13 @@
+{
+  "name": "authors-crud",
+  "description": "Projeto de Front-End para consumo de API",
+  "version": "0.0.0",
+  "license": "",
+  "private": false,
+  "dependencies": {
+    "angular": "1.6.1",
+    "angular-route": "1.6.1",
+    "bootstrap": "3.3.7",
+    "jquery": "3.1.1"
+  }
+}
