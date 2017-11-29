@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <div class="row" id="authors">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div><h3>List of Authors</h3></div>
+                        </div>
+                        <div class="col-xs-8 col-sm-4">
+                            <input class="form-control" type="text" ng-model="lastName" placeholder="Last Name">
+                        </div>
+                        <div class="col-xs-4 col-sm-3">
+                            <input class="btn btn-primary" ng-click="filterAuthors()" type="submit" value="Search">
+                        </div>
+                    </div>
+                    <input class="btn btn-primary" ng-click="goTo('/new')" type="submit" value="New Author" style="margin-top: 5px">
+                    <div id="author-grid" class="grid-view">
+                        <div class="summary">Showing {{10*(page-1) + 1}}-{{10*(page-1)+authors_show.length}} of {{authors.length}} results.</div>
+                        <table class="table table-bordered table-condensed table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th class="button-column">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="author in authors_show">
+                                    <td width="5%">{{author.id}}</td>
+                                    <td width="35%">{{author.firstName}}</td>
+                                    <td width="40%">{{author.lastName}}</td>
+                                    <td class="button-column">
+                                        <a class="glyphicon glyphicon-book" title="BOOKS" ng-click="goTo('/books/'+author.id)"></a>
+                                        <a class="glyphicon glyphicon-pencil" title="EDIT" ng-click="goTo('/edit/'+author.id)"></a>
+                                        <a class="glyphicon glyphicon-remove" title="DELETE" ng-click="deleteAuthor(author.id)"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6">
+                                <div class="previous"><a ng-click="previous()">Previous</a></div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6">
+                                <div class="next"><a ng-click="next()">Next</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
