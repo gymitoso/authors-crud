@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row" id="new_book">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div><h1>Edit {{author.firstName}} {{author.lastName}} Book {{book.id}}</h1></div>
+                    <form id="book-form" name="bookForm">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="book_title" class="required">Title</label>
+                                    <input class="form-control" name="book_title" id="book_title" type="text" required ng-model="book.title">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn-group" role="group">
+                            <input class="btn btn-primary" ng-click="saveBook()" type="submit" ng-disabled="bookForm.$invalid" value="Save" >
+                            <input class="btn btn-danger" ng-click="goTo('/books/'+author.id)" type="button" value="Cancel" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
