@@ -1,0 +1,61 @@
+/* app css stylesheet */
+
+body a{
+    cursor: pointer !important;
+}
+.grid-view .summary {
+    margin: 0 0 5px 0;
+    text-align: right;
+}
+.grid-view .button-column {
+    text-align: center;
+    width: 90px;
+}
+
+.glyphicon {
+    font-size: large;
+}
+
+textarea {
+    resize: none;
+}
+
+.previous {
+    text-align: left;
+}
+
+.next {
+    text-align: right;
+}
+
+/*
+ Painel de Erro
+*/
+
+.errorPainel {
+    z-index: 102;
+    float: right;
+    margin-right: 5px;
+    height: 30%;
+    width: 30%
+}
+
+/*
+    Spinner load
+*/
+.loader {
+    z-index: 100;
+    position: absolute;
+    margin: 25% 45% 25% 45%;
+    border: 7px solid #f3f3f3; /* Cinza claro */
+    border-top: 7px solid #3498db; /* Azul */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
