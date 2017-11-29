@@ -1,0 +1,23 @@
+{
+  "name": "authors-crud",
+  "private": false,
+  "version": "0.0.0",
+  "description": "Projeto de Front-End para o consumo de API",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^1.1.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-install": "^0.6.0",
+    "gulp-jshint": "~1.5.0",
+    "gulp-load-plugins": "~0.4.0",
+    "gulp-uglify": "^2.0.0",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1"
+  },
+  "scripts": {
+    "update-deps": "npm update",
+    "postupdate-deps": "bower update",
+    "start": "http-server -a localhost -p 8000 -c-1 ./build"
+  },
+  "dependencies": {}
+}
