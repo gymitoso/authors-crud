@@ -13,4 +13,4 @@ No terminal da aplicação digite:
 2. ```bower install```
 3. ```gulp```
 4. ```npm start```
-5. Check http://localhost:8000
+5. A aplicação estará em http://localhost:8000
